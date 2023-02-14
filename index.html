@@ -1,0 +1,1366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(215, 210, 210);
+        }
+
+        .body-mean-header {
+            height: 200vh;
+        }
+
+        /* first page Start */
+
+        .body-header {
+            height: 75px;
+            background-color: rgb(219, 206, 206);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 0px 40px;
+            justify-content: space-between;
+        }
+
+        .body-header h1 {
+            padding-left: -100px;
+        }
+
+        .body-header h1:hover {
+            color: rgb(97, 4, 97);
+            text-shadow: 3px 2px 2px rgb(136, 127, 10);
+
+
+        }
+
+        .bi-yin-yang:hover {
+            color: rgb(89, 70, 188);
+            border-radius: 5px;
+
+        }
+
+        .d-flex {
+            display: flex;
+            gap: 50px;
+        }
+
+        .d-flex a {
+            text-decoration: none;
+            font-size: 1.5rem;
+            color: black;
+            font-weight: bold;
+            transition: 800ms;
+
+        }
+
+        .d-flex a:hover {
+            color: crimson;
+            background-color: yellow;
+            border-radius: 8px;
+            /* transition: 600ms; */
+            box-shadow: 10px 10px 5px rgb(72, 72, 104);
+            /* transform: scale(1.2, 1.2); */
+            transform: rotatex(360deg);
+
+        }
+
+        .body-header-icon a {
+            background-color: white;
+            border-radius: 25%;
+            margin: 3px;
+            padding: 8px;
+            font-size: 20px;
+            cursor: pointer;
+            transition: 500ms;
+
+        }
+
+
+
+        .body-header-icon a:hover {
+            background-color: palevioletred;
+            padding-top: 20px;
+
+        }
+
+
+        .list-icon {
+            display: none;
+        }
+
+        .body-header-images {
+            position: relative;
+        }
+
+        .body-header-images img {
+            filter: blur(1px);
+            filter: brightness(40%);
+
+        }
+
+        .body-header-images-chaild {
+            position: absolute;
+            height: 300px;
+            width: 500px;
+            top: 100px;
+            left: 80px;
+
+        }
+
+        .white {
+            color: rgb(250, 240, 242);
+        }
+
+        .black {
+            color: rgb(220, 201, 174);
+            font-size: 20px;
+        }
+
+        .body-header-btn button {
+            padding: 15px 25px;
+            font-size: 20px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+
+        .body-header-btn button:hover {
+            color: white;
+            background-color: darkmagenta;
+            text-shadow: 3px 2px 2px rgb(136, 127, 10);
+            box-shadow: 2px 4px 5px rgb(222, 99, 99);
+        }
+
+        .btn-2 {
+            background: wheat;
+            border: none;
+        }
+
+        .btn-1 {
+            background-color: transparent;
+            color: white;
+        }
+
+
+
+        /* first page End */
+
+        /* second page start */
+
+        .second-images-mean {
+            display: flex;
+            border-radius: 20px;
+        }
+
+        .second-image img {
+            border-radius: 20px;
+            margin: 50px;
+            margin-left: 100px;
+            transition: 0.8s;
+
+        }
+
+        .second-image img:hover {
+            transform: rotatey(360deg);
+            border-radius: 50%;
+        }
+
+        .second-image-sider {
+            height: 550px;
+            width: 500px;
+            margin-top: 75px;
+        }
+
+        .second-image-sider h1 {
+            font-size: 65px;
+        }
+
+        .second-image-box3 {
+            display: flex;
+            justify-content: flex-start;
+            gap: 15px;
+        }
+
+        .desing {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 20px;
+            background-color: white;
+            height: 150px;
+            width: 150px;
+            font-size: 30px;
+            cursor: pointer;
+            transition: .5s;
+
+        }
+
+
+
+        .desing:hover {
+            background: rgb(194, 43, 101);
+            background: linear-gradient(90deg, rgba(194, 43, 101, 1) 1%, rgba(137, 41, 201, 1) 15%, rgba(15, 198, 33, 0.9616888991924895) 29%, rgba(205, 40, 87, 1) 37%, rgba(253, 29, 29, 1) 51%, rgba(252, 176, 69, 1) 63%, rgba(2, 116, 74, 0.9868989832261029) 74%, rgba(253, 103, 49, 1) 84%);
+            color: rgb(254, 248, 238);
+            transform: rotate(360deg);
+            /* border-radius: 50%; */
+            /* transform: scale(1.3, 1.3); */
+
+        }
+
+        .desing .bi {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 70px;
+            color: orchid;
+            /* transition: .5s; */
+        }
+
+        .desing .bi:hover {
+            color: white;
+            /* transform: rotate(360deg); */
+
+        }
+
+        .second-image-btn {
+            padding: 15px 30px;
+            font-size: large;
+            background-color: rgb(180, 179, 179);
+            border-radius: 15px;
+            cursor: pointer;
+            transition: 0.3s;
+
+        }
+
+        .second-image-btn:hover {
+            transform: rotate(360deg);
+            color: white;
+            text-shadow: 2px 2px 1px rgb(153, 109, 194);
+            background-image: radial-gradient(red, blue, green);
+        }
+
+        /* second page End */
+
+        /* third page start */
+
+        .third-imges {
+            border-radius: 20px;
+            background-color: white;
+            margin: 100px;
+            padding: 40px 70px;
+            width: auto;
+            height: 350px;
+            position: relative;
+        }
+
+
+        .third-imges h1 {
+            font-size: 60px;
+        }
+
+        .third-imges h1:hover {
+            text-shadow: 2px 3px 2px blueviolet;
+        }
+
+        .trd-images img {
+            display: flex;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            height: 420px;
+            position: absolute;
+            bottom: 0;
+            right: 75px;
+            transition: 1s;
+        }
+
+        .trd-images img:hover {
+            transform: rotateX(360deg);
+        }
+
+        /* Third page End */
+
+        /* Four page start */
+
+        .four-page {
+            height: 400px;
+            background-color: white;
+            padding: 100px;
+        }
+
+        .four-page p {
+            color: rgb(150, 137, 137);
+        }
+
+        .checkbox {
+            display: flex;
+            gap: 30px;
+            justify-content: space-evenly;
+        }
+
+        .checkbox h3:hover {
+            color: rgb(7, 7, 7);
+
+        }
+
+        .checkbox h3 {
+            font-size: 20px;
+            width: 500px;
+            color: rgb(95, 77, 77);
+            padding-bottom: 20px;
+        }
+
+        .checkbox .bi {
+            background-color: rgb(193, 189, 189);
+            border-radius: 100%;
+            font-size: 30px;
+            cursor: pointer;
+            transition: .5s;
+
+        }
+
+        .checkbox .bi:hover {
+            color: rgb(57, 2, 53);
+            transform: rotate(30deg);
+        }
+
+
+        /* Four page End */
+        /* Five page start */
+        .five-page .core-f {
+            display: flex;
+            justify-content: center;
+            padding: 50px;
+            font-size: 65px;
+        }
+
+
+        .five-page .core-f:hover {
+            text-shadow: 0px 5px 3px red;
+        }
+
+        .five-page-desing {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+
+        .five-page-d-flex {
+            border-radius: 20px;
+            background-color: white;
+            height: 400px;
+            width: 350px;
+        }
+
+        .five-page-d-flex:hover {
+            background-image: linear-gradient(red, 50%, rgb(42, 5, 48), green, rgb(170, 44, 65));
+
+        }
+
+        .five-page-desing img {
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            height: 300px;
+            width: 100%;
+            transition: .5s;
+            /* overflow: hidden; */
+
+        }
+
+        .five-page-desing img:hover {
+            transform: scale(.85);
+        }
+
+        .margin {
+            position: relative;
+            margin: 20px;
+
+        }
+
+        .margin h1:hover {
+            color: rgb(146, 249, 28);
+            text-shadow: 4px 2px 1px rgb(146, 127, 127);
+        }
+
+        .margin p {
+            color: rgb(81, 73, 73);
+        }
+
+        .margin p:hover {
+            color: rgb(29, 253, 33);
+        }
+
+        .bi-arrow-right {
+            border: none;
+            border-radius: 5px;
+            background-color: rgb(222, 219, 219);
+            cursor: pointer;
+            font-size: 40px;
+            position: absolute;
+            right: 0;
+            top: -48px;
+        }
+
+        .bi-arrow-right:hover {
+            background-color: mediumvioletred;
+            box-shadow: -10px 4px 1px red;
+        }
+
+        /* Five page End */
+        /* Six page Start */
+
+        .six-page {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+            height: 600px;
+        }
+
+        .six-images {
+            display: flex;
+            gap: 20px;
+            border-radius: 20px;
+            background-color: white;
+            height: 400px;
+            width: 80%;
+            padding: 75px;
+        }
+
+        .six-page-flex {
+            height: 200px;
+            width: 60%;
+        }
+
+        .six-page-flex h1 {
+            font-size: 60px;
+        }
+
+        .six-page-flex h1:hover {
+            text-shadow: 4px 2px 1px gold;
+        }
+
+        .six-page-flex p:hover {
+            font-weight: bold;
+            color: rgb(2, 0, 97);
+        }
+
+
+        .six-images-box1 {
+            height: 300px;
+            width: 350px;
+        }
+
+        .six-images-box {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-radius: 10px;
+            border: 2px solid rgb(228, 218, 218);
+            height: 60px;
+            width: 100%;
+            font-size: 30px;
+            padding-left: 20px;
+            margin: 30px 0px;
+        }
+
+        .six-image-box-icon {
+            display: flex;
+            gap: 3%;
+        }
+
+        .six-image-box-icon:hover {
+            text-shadow: 2px 2px 1px rgb(203, 229, 7);
+        }
+
+        .six-box4:hover {
+            background-color: blueviolet;
+            border-radius: 5px;
+            box-shadow: -3px -3px 2px rgb(245, 83, 2);
+        }
+
+        /* Six page End */
+
+        /* Seven page Start */
+
+        .seven-page {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .seven-page-text {
+            width: 650px;
+            margin-top: 75px;
+            margin-bottom: 50px;
+        }
+
+        .seven-page-text:hover {
+            text-shadow: 3px 2px 2px darkblue;
+        }
+
+        .seven-page-text p {
+            font-size: 30px;
+            margin-left: 43%;
+
+        }
+
+        .seven-page-text h1 {
+            font-size: 70px;
+            margin-left: 30px;
+
+        }
+
+        .seven-page-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 400px;
+            margin: 0px 100px;
+        }
+
+        .seven-page-box1 {
+            display: flex;
+            justify-content: center;
+            background-color: white;
+            border-radius: 20px;
+            height: 400px;
+            width: 250px;
+            margin: 0px 10px;
+
+        }
+
+        .seven-page-images img {
+            height: 200px;
+            width: 200px;
+            border-radius: 100%;
+            margin: 20px;
+        }
+
+        .seven-page-images h1 {
+            display: flex;
+            justify-content: center;
+        }
+
+        .seven-page-images p {
+            color: gray;
+            padding-top: 5px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .seven-page-icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+        }
+
+        .seven-page-icons123:hover {
+            background-color: palevioletred;
+        }
+
+        .seven-page-icons123 {
+            background-color: rgb(215, 210, 210);
+            height: 38px;
+            width: 38px;
+            font-size: 20px;
+            padding: 10px;
+            margin-top: 5px;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            transition: 500ms;
+
+        }
+
+        /* Seven page End */
+        /* Eight page start */
+
+
+        .eight-page {
+            position: relative;
+            margin: 80px 150px;
+            height: 500px;
+            border-radius: 22px;
+
+        }
+
+        .eight-page img {
+            border-radius: 20px;
+        }
+
+
+        .eight-page-chaild {
+            background-color: #f5deb3;
+            height: 100px;
+            border-radius: 20px;
+            width: 80%;
+            /* margin: -50px; */
+            position: absolute;
+            bottom: -50px;
+            left: 95px;
+        }
+
+        .eight-d-flex {
+            display: flex;
+            margin: 18px 39px;
+            gap: 70px;
+        }
+
+        .eight-d-flex p {
+            padding-bottom: 8px;
+        }
+
+        .eight-d-flex h3 {
+            font-weight: bold;
+
+        }
+
+        .eight-d-flex p {
+            margin-top: 5px;
+            color: rgb(100, 81, 81);
+            font-size: 18px;
+        }
+
+        .eight-d-flex button {
+            border-radius: 5px;
+            font-weight: bold;
+            background-color: black;
+            color: white;
+            margin-top: 10px;
+            font-size: medium;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        /* Eight page End */
+        /* nine page Start */
+        .nine-page {
+            height: 700px;
+            margin-top: 150px;
+            background-color: black;
+        }
+
+        .nine-page-text {
+            color: white;
+            height: 100px;
+            padding: 75px 100px;
+
+        }
+
+        .nine-page-text h1 {
+            font-size: 60px;
+        }
+
+        .nine-page-text h1:hover {
+            text-shadow: 3px 3px 1px darkorange;
+        }
+
+        .nine-page-text p {
+            font-size: 20px;
+        }
+
+        .nine-page-box {
+            display: flex;
+            margin: 60px 75px;
+
+        }
+
+        .nine-page-box1 {
+            border-radius: 20px;
+            font-size: 30px;
+            background-color: white;
+            height: 350px;
+            width: 300px;
+            padding: 20px;
+            margin-left: 25px;
+            position: relative;
+
+        }
+
+        .nine-page-box1 img {
+            /* display: flex; */
+            height: 80px;
+            width: 80px;
+            margin-top: 50px;
+            border-radius: 100%;
+            transition: 500ms;
+        }
+
+        .nine-page-box1 img:hover {
+            transform: rotateY(360deg)
+        }
+
+        .nine-page-images {
+            position: absolute;
+            bottom: 40px;
+            right: 30px;
+        }
+
+
+        .nine-page-images p {
+            font-size: small;
+        }
+
+        .nine-page-images h4 {
+            cursor: pointer;
+        }
+
+        .nine-page-images h4:hover {
+            text-shadow: 2px 1px 1px blueviolet;
+        }
+
+        .nine-page-icon {
+            font-size: 50px;
+            position: absolute;
+            bottom: 120px;
+            right: 30px;
+            transition: 300ms;
+        }
+
+        .nine-page-icon:hover {
+            color: rgb(69, 69, 36);
+            transform: rotate(360deg);
+        }
+
+        /* Nine page End */
+
+        /* Ten page start */
+        .ten-page {
+            height: 900px;
+        }
+
+        .ten-page-text {
+            display: flex;
+            justify-content: center;
+            padding-top: 75px;
+            font-size: 30px;
+
+        }
+
+        .ten-page-vdo iframe {
+            display: flex;
+            justify-content: center;
+            padding-top: 75px;
+            padding-left: 100px;
+            width: 90%;
+            height: 650px;
+        }
+
+        /* Ten page End */
+
+
+        .body-footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            height: 900px;
+        }
+
+        .body-footer-box {
+            border-radius: 20px;
+            background-color: gray;
+            height: 600px;
+            width: 80%;
+            padding: 80px 100px;
+
+
+        }
+
+        .body-footer-text input {
+            font-size: large;
+            padding: 15px;
+            width: 33%;
+            height: 50px;
+            border: none;
+            border-radius: 10px;
+        }
+
+        .body-footer-box p {
+            font-size: 20px;
+            padding-bottom: 5px;
+            color: rgb(58, 58, 58);
+        }
+
+        .body-footer-box h1 {
+            font-size: 55px;
+            padding-bottom: 30px;
+        }
+
+        .body-footer-box textarea {
+            margin-top: 20px;
+            padding: 15px;
+            font-size: 20px;
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .body-footer-box button {
+            float: right;
+            cursor: pointer;
+            padding: 15px 25px;
+            color: white;
+            font-weight: bold;
+            border-radius: 5px;
+            background-color: black;
+        }
+
+        .body-footer-box button:hover {
+            background-color: white;
+            color: black;
+            transition: 1s;
+        }
+
+
+        @media(max-width:800px) {
+
+            .body-header-icon,
+            .d-flex {
+                display: none;
+            }
+
+            .list-icon {
+                display: block;
+                font-size: 40px;
+            }
+
+            .list-icon:hover .body-header-icon {
+                display: block;
+            }
+
+            .body-header-images {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .body-header-images-chaild {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                width: 400px;
+                left: 40px;
+            }
+
+            .body-header-btn {
+                display: flex;
+            }
+
+
+        }
+
+        @media(max-width:800px) {
+
+            /* second images start */
+
+            .second-images-mean {
+                display: block;
+            }
+
+            .second-image img {
+                border-radius: 20px;
+                width: 400px;
+                margin-left: 40px;
+            }
+
+            .second-image {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            /*  images set end*/
+
+
+            .second-image-sider {
+                /* display: flex; */
+                justify-content: center;
+                align-items: center;
+            }
+
+            /* .desing .test {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            } */
+
+            h1 {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            /* .sider-d-flex {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            } */
+
+        }
+
+        @media(max-width:800px) {
+            .second-image-sider h1 {
+                font-size: 35px;
+            }
+        }
+
+
+        /* deckstop */
+        /* @media(max-width:1200px) {} */
+
+        /* laptop */
+        /* @media(max-width:1023px) {} */
+
+        /* tablet */
+        @media(max-width:768px) {
+            .third-imges {
+                display: block;
+            }
+        }
+
+        /* mobile */
+        @media(max-width:480px) {
+            .second-image {
+                /* margin-top: 50px; */
+                gap: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="body-mean-header">
+        <div class="body-header">
+            <h1><i class="bi bi-yin-yang"></i> SoftwareM4 </h1>
+            <div class="d-flex">
+                <a href=""> Home</a>
+                <a href=""> About</a>
+                <a href=""> Services</a>
+                <a href=""> Contact</a>
+            </div>
+            <div class="body-header-icon">
+                <div>
+
+                    <a href="https://www.facebook.com/campaign/landing.php?campaign_id=14884913640&extra_1=s%7Cc%7C589460569849%7Cb%7Cfacebook%20%27%7C&placement=&creative=589460569849&keyword=facebook%20%27&partner_id=googlesem&extra_2=campaignid%3D14884913640%26adgroupid%3D128696220912%26matchtype%3Db%26network%3Dg%26source%3Dnotmobile%26search_or_content%3Ds%26device%3Dc%26devicemodel%3D%26adposition%3D%26target%3D%26targetid%3Dkwd-327195741349%26loc_physical_ms%3D1007780%26loc_interest_ms%3D%26feeditemid%3D%26param1%3D%26param2%3D&gclid=Cj0KCQiA7bucBhCeARIsAIOwr--yc9jxmMa-5zPRNBw5YHFEK78pFSs9ZGHEECRIzbIeX1qAeQO-SlQaAlVVEALw_wcB"
+                        title="Facebook"><i class="bi bi-facebook"></i></a>
+                    <a href="https://twitter.com/i/flow/login" title="twitter"><i class="bi bi-twitter"></i></a>
+                    <a href="https://www.instagram.com/" title="instagram"><i class="bi bi-instagram"></i></a>
+                </div>
+            </div>
+            <div class="list-icon">
+                <a href=""><i class="bi bi-list"></i></a>
+            </div>
+        </div>
+        <div class="body-header-images">
+
+            <img src="assets/images/background1.jpg" alt="" height="550px" width="100%">
+            <div class="body-header-images-chaild">
+                <div class="white">
+                    <p> Developer Company</p>
+                    <br>
+                    <h1> Software App </h1>
+                </div>
+                <div class="black">
+                    <br>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Accumsan porttior egestas fermentum nulla </p>
+                    <br>
+                </div>
+                <div class="body-header-btn">
+                    <button class="btn-2"><b>Our Services</b></button>
+                    <button class="btn-1"><b> Learn More </b></button>
+                </div>
+
+            </div>
+        </div>
+        <br>
+        <div class="second-images-mean" id="p2">
+            <div class="second-image">
+                <img src="assets/images/features1.jpg" alt="" height="600px">
+            </div>
+            <div class="second-image-sider">
+
+                <p> <b> Core Features </b> </p>
+                <br>
+
+                <h1>
+                    Best Business Software Solution
+                </h1>
+                <br><br>
+                <div class="second-image-box3">
+                    <div class="desing">
+                        <div class=""><i class="bi bi-palette"></i>
+                            <h3>Desing</h3>
+                        </div>
+                    </div>
+                    <div class="desing">
+                        <div class=""><i class="bi bi-hand-index-thumb"></i>
+                            <h3>Usage</h3>
+                        </div>
+                    </div>
+                    <div class="desing">
+                        <div class="test"><i class="bi bi-people-fill"></i>
+                            <h3>Testing</h3>
+                        </div>
+                    </div>
+                </div>
+                <br><br>
+                <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Accumsan porttior egestas fermentum nulla </h4>
+                <br>
+                <button class="second-image-btn"><b> Read More </b></button>
+            </div>
+        </div>
+
+
+        <div class="third-imges">
+            <p> <b> App Download </b></p>
+            <br>
+            <h1> You can control </h1>
+            <h1> direct from your</h1>
+            <h1> mobile.</h1>
+
+            <div class="trd-images">
+                <img src="assets/images/features2.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="four-page">
+            <h2>Our Goal</h2>
+            <br>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci ipsa quisquam hic officiis
+                reprehenderit! Blanditiis recusandae placeat veniam dolor numquam tempora non reprehenderit illo,
+                molestiae voluptate, fugiat asperiores saepe ab nihil alias libero doloribus temporibus nobis quo quia
+                ipsam! Eaque numquam aperiam reprehenderit aut culpa repudiandae. Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Cum, et provident soluta facere voluptates fugit excepturi adipisci. Cum magnam
+                inventore dolorem fugiat alias totam, voluptas quod veritatis facilis magni molestias reprehenderit
+                quisquam ab asperiores ratione. Similique accusamus fugiat, numquam quia a fugit distinctio quod
+                inventore alias velit odio pariatur sequi!
+                Excepturi sint iure repellendus.</p>
+            <br><br>
+            <div class="checkbox">
+                <h3><i class="bi bi-check-circle"></i> App Desing & Research </h3>
+                <h3><i class="bi bi-check-circle"></i> Development & Testing</h3>
+                <h3><i class="bi bi-check-circle"></i> App Desing & Research </h3>
+            </div>
+            <div class="checkbox">
+                <h3><i class="bi bi-check-circle"></i> Development & Testing</h3>
+                <h3><i class="bi bi-check-circle"></i> App Desing & Research </h3>
+                <h3><i class="bi bi-check-circle"></i> Development & Testing</h3>
+            </div>
+
+
+        </div>
+
+        <div class="five-page">
+            <h1 class="core-f"> Core Features</h1>
+            <br>
+            <div class="five-page-desing">
+                <div class="five-page-d-flex">
+                    <img src="assets/images/features1.jpg" alt="">
+                    <div class="margin">
+                        <p> Software , Interface</p>
+                        <h1>Development</h1>
+                        <i class="bi bi-arrow-right"></i>
+                    </div>
+                </div>
+
+
+                <div class="five-page-d-flex">
+                    <div class="five-page-d-flex">
+                        <img src="assets/images/features2.jpg" alt="">
+                        <div class="margin">
+                            <p> Software , Design </p>
+                            <h1>Development</h1>
+                            <i class="bi bi-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="five-page-d-flex">
+                    <div class="five-page-d-flex">
+                        <img src="assets/images/features3.jpg" alt="">
+                        <div class="margin">
+                            <p> Software , Interface </p>
+                            <h1>Development</h1>
+                            <i class="bi bi-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <br><br><br><br><br><br>
+
+        <div class="six-page">
+            <div class="six-images">
+                <div class="six-page-flex">
+                    <p>Careers</p>
+                    <br>
+                    <h1> Join our taem to creat best digital Solution.</h1>
+
+                </div>
+
+
+                <div class="six-images-box1">
+                    <div class="six-images-box">
+                        <div class="six-image-box-icon">
+                            <div>
+                                <i class="bi bi-gear"></i>
+                            </div>
+                            <div>
+                                Development
+                            </div>
+                        </div>
+
+                        <div> <i class="bi bi-arrow-right-square six-box4 "></i></div>
+                    </div>
+
+                    <div class="six-images-box">
+                        <div class="six-image-box-icon">
+                            <div><i class="bi bi-palette"></i></div>
+
+                            <div> Design</div>
+                        </div>
+                        <div> <i class="bi bi-arrow-right-square six-box4"></i></div>
+                    </div>
+
+                    <div class="six-images-box">
+                        <div class="six-image-box-icon">
+                            <div> <i class="bi bi-box-seam"></i></div>
+                            <div> Optimization</div>
+                        </div>
+                        <div><i class="bi bi-arrow-right-square six-box4"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="seven-page" id="h">
+            <div class="seven-page-text">
+                <p><b> Experts </b></p>
+                <h1>Our team members</h1>
+            </div>
+        </div>
+        <div class="seven-page-box">
+            <div class="seven-page-box1">
+                <div class=" seven-page-images">
+                    <img src="assets/images/team1.jpg" alt="">
+                    <h1>John Smith</h1>
+                    <p>Programmer</p>
+                    <br><br><br>
+                    <div class="seven-page-icon">
+                        <div class="seven-page-icons123" title="Facebook">
+                            <a href="https://www.facebook.com/campaign/landing.php?campaign_id=14884913640&extra_1=s%7Cc%7C589460569849%7Cb%7Cfacebook%20%27%7C&placement=&creative=589460569849&keyword=facebook%20%27&partner_id=googlesem&extra_2=campaignid%3D14884913640%26adgroupid%3D128696220912%26matchtype%3Db%26network%3Dg%26source%3Dnotmobile%26search_or_content%3Ds%26device%3Dc%26devicemodel%3D%26adposition%3D%26target%3D%26targetid%3Dkwd-327195741349%26loc_physical_ms%3D1007780%26loc_interest_ms%3D%26feeditemid%3D%26param1%3D%26param2%3D&gclid=Cj0KCQiA7bucBhCeARIsAIOwr--yc9jxmMa-5zPRNBw5YHFEK78pFSs9ZGHEECRIzbIeX1qAeQO-SlQaAlVVEALw_wcB"
+                                title="Facebook"><i class="bi bi-facebook"></i></a>
+                        </div>
+                        <div class="seven-page-icons123" title="Twitter">
+                            <a href="https://twitter.com/i/flow/login" title="twitter"><i class="bi bi-twitter"></i></a>
+                        </div>
+                        <div class="seven-page-icons123">
+                            <a href="https://www.instagram.com/" title="instagram"><i class="bi bi-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="seven-page-box1">
+                <div class=" seven-page-images">
+                    <img src="assets/images/team2.jpg" alt="">
+                    <h1>Sarah Palmer</h1>
+                    <p>Manager</p>
+                    <br><br><br>
+                    <div class="seven-page-icon">
+                        <div class="seven-page-icons123" title="Facebook">
+                            <a href="https://www.facebook.com/campaign/landing.php?campaign_id=14884913640&extra_1=s%7Cc%7C589460569849%7Cb%7Cfacebook%20%27%7C&placement=&creative=589460569849&keyword=facebook%20%27&partner_id=googlesem&extra_2=campaignid%3D14884913640%26adgroupid%3D128696220912%26matchtype%3Db%26network%3Dg%26source%3Dnotmobile%26search_or_content%3Ds%26device%3Dc%26devicemodel%3D%26adposition%3D%26target%3D%26targetid%3Dkwd-327195741349%26loc_physical_ms%3D1007780%26loc_interest_ms%3D%26feeditemid%3D%26param1%3D%26param2%3D&gclid=Cj0KCQiA7bucBhCeARIsAIOwr--yc9jxmMa-5zPRNBw5YHFEK78pFSs9ZGHEECRIzbIeX1qAeQO-SlQaAlVVEALw_wcB"
+                                title="Facebook"><i class="bi bi-facebook"></i></a>
+                        </div>
+                        <div class="seven-page-icons123" title="Twitter">
+                            <a href="https://twitter.com/i/flow/login" title="twitter"><i class="bi bi-twitter"></i></a>
+                        </div>
+                        <div class="seven-page-icons123">
+                            <a href="https://www.instagram.com/" title="instagram"><i class="bi bi-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="seven-page-box1">
+                <div class=" seven-page-images">
+                    <img src="assets/images/team3.jpg" alt="">
+                    <h1>Adam Swift</h1>
+                    <p>Analyst</p>
+                    <br><br><br>
+                    <div class="seven-page-icon">
+                        <div class="seven-page-icons123" title="Facebook">
+                            <a href="https://www.facebook.com/campaign/landing.php?campaign_id=14884913640&extra_1=s%7Cc%7C589460569849%7Cb%7Cfacebook%20%27%7C&placement=&creative=589460569849&keyword=facebook%20%27&partner_id=googlesem&extra_2=campaignid%3D14884913640%26adgroupid%3D128696220912%26matchtype%3Db%26network%3Dg%26source%3Dnotmobile%26search_or_content%3Ds%26device%3Dc%26devicemodel%3D%26adposition%3D%26target%3D%26targetid%3Dkwd-327195741349%26loc_physical_ms%3D1007780%26loc_interest_ms%3D%26feeditemid%3D%26param1%3D%26param2%3D&gclid=Cj0KCQiA7bucBhCeARIsAIOwr--yc9jxmMa-5zPRNBw5YHFEK78pFSs9ZGHEECRIzbIeX1qAeQO-SlQaAlVVEALw_wcB"
+                                title="Facebook"><i class="bi bi-facebook"></i></a>
+                        </div>
+                        <div class="seven-page-icons123" title="Twitter">
+                            <a href="https://twitter.com/i/flow/login" title="twitter"><i class="bi bi-twitter"></i></a>
+                        </div>
+                        <div class="seven-page-icons123">
+                            <a href="https://www.instagram.com/" title="instagram"><i class="bi bi-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="seven-page-box1">
+                <div class=" seven-page-images">
+                    <img src="assets/images/team4.jpg" alt="">
+                    <h1>Helen Smith</h1>
+                    <p>Designer</p>
+                    <br><br><br>
+                    <div class="seven-page-icon">
+                        <div class="seven-page-icons123" title="Facebook">
+                            <a href="https://www.facebook.com/campaign/landing.php?campaign_id=14884913640&extra_1=s%7Cc%7C589460569849%7Cb%7Cfacebook%20%27%7C&placement=&creative=589460569849&keyword=facebook%20%27&partner_id=googlesem&extra_2=campaignid%3D14884913640%26adgroupid%3D128696220912%26matchtype%3Db%26network%3Dg%26source%3Dnotmobile%26search_or_content%3Ds%26device%3Dc%26devicemodel%3D%26adposition%3D%26target%3D%26targetid%3Dkwd-327195741349%26loc_physical_ms%3D1007780%26loc_interest_ms%3D%26feeditemid%3D%26param1%3D%26param2%3D&gclid=Cj0KCQiA7bucBhCeARIsAIOwr--yc9jxmMa-5zPRNBw5YHFEK78pFSs9ZGHEECRIzbIeX1qAeQO-SlQaAlVVEALw_wcB"
+                                title="Facebook"><i class="bi bi-facebook"></i></a>
+                        </div>
+                        <div class="seven-page-icons123" title="Twitter">
+                            <a href="https://twitter.com/i/flow/login" title="twitter"><i class="bi bi-twitter"></i></a>
+                        </div>
+                        <div class="seven-page-icons123">
+                            <a href="https://www.instagram.com/" title="instagram"><i class="bi bi-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="eight-page">
+
+            <img src="assets/images/background3.jpg" alt="" height="500px" width="100%">
+
+            <div class="eight-page-chaild">
+                <div class="eight-d-flex">
+
+                    <div class="eight-d-flex-box">
+                        <p> Cleints</p>
+                        <h3> Art Meseum</h3>
+                    </div>
+                    <div class="eight-d-flex-box">
+                        <p> Services</p>
+                        <h3> Website</h3>
+                    </div>
+                    <div class="eight-d-flex-box">
+                        <p> Durations</p>
+                        <h3> 15-30 Days </h3>
+                    </div>
+                    <div class="eight-d-flex-box">
+                        <p> Tools</p>
+                        <h3> Figma </h3>
+                    </div>
+                    <div class="eight-d-flex-box">
+                        <button class="eigth-btn"> Preview</button>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="nine-page">
+            <div class="nine-page-text">
+                <p>Testimonials</p>
+                <h1>Our Client Feedbacks</h1>
+            </div>
+            <div class="nine-page-box">
+                <div class="nine-page-box1">
+                    <i> Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic cum beatae nam architecto!
+                    </i>
+                    <br>
+                    <img src="assets/images/team1.jpg" alt="">
+                    <div class="nine-page-icon">
+                        <i class="bi bi-chat-quote"></i>
+                    </div>
+                    <div class="nine-page-images">
+                        <h4>John Smith</h4>
+                        <p>Programmer</p>
+                    </div>
+                </div>
+                <div class="nine-page-box1">
+                    <i> Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic cum beatae nam architecto!
+                    </i>
+                    <br>
+                    <img src="assets/images/team2.jpg" alt="">
+                    <div class="nine-page-icon">
+                        <i class="bi bi-chat-quote"></i>
+                    </div>
+                    <div class="nine-page-images">
+                        <h4>Sahl Palmer</h4>
+                        <p>Manager</p>
+                    </div>
+                </div>
+                <div class="nine-page-box1">
+                    <i> Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic cum beatae nam architecto!
+                    </i>
+                    <br>
+                    <img src="assets/images/team3.jpg" alt="">
+                    <div class="nine-page-icon">
+                        <i class="bi bi-chat-quote"></i>
+                    </div>
+                    <div class="nine-page-images">
+                        <h4>Adam Swift</h4>
+                        <p>Analyst</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="ten-page">
+            <div class="ten-page-text">
+                <h1>View in Action</h1>
+
+            </div>
+            <div class="ten-page-vdo">
+                <iframe width=" 960" height="515" src="https://www.youtube.com/embed/lC9EFHPTqFM"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+
+        </div>
+        <form action="">
+            <div class="body-footer">
+                <div class="body-footer-box">
+                    <p>Estimate For Project </p>
+                    <h1>Share Work Details</h1>
+                    <div class="body-footer-text">
+
+                        <input type="text" placeholder="Full Name">
+                        <input type="email" placeholder="Email">
+                        <input type="text" placeholder="Subject">
+                    </div>
+                    <textarea name="" id="" cols="" rows="8" placeholder="Work Details"></textarea>
+                    <button>Subscribe Now</button>
+                </div>
+
+            </div>
+        </form>
+
+    </div>
+
+    </div>
+</body>
+
+</html>
